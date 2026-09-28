@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#071a31" />
+    <meta name="google" content="notranslate" />
+    <title>Photos — Hockey IQ Classic</title>
+    <meta
+      name="description"
+      content="Retrouvez les plus belles images du Hockey IQ Classic."
+    />
+    <link rel="icon" type="image/svg+xml" href="assets/iq-classic-logo.svg" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="photos.css" />
+  </head>
+
+  <body translate="no" class="photos-page">
+
+    <div class="language-choice" id="languageChoice" hidden>
+      <div class="language-choice__panel" role="dialog" aria-modal="true" aria-labelledby="languageTitle">
+        <img src="assets/iq-classic-logo.svg" alt="" />
+        <p>Bienvenue · Welcome</p>
+        <h2 id="languageTitle">Choisissez votre langue</h2>
+        <div class="language-choice__actions">
+          <button type="button" data-language="fr">Français</button>
+          <button type="button" data-language="en">English</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="topbar">
+      Le hockey se joue ici. L'expérience commence maintenant.
+    </div>
+
+    <header class="photos-header">
+      <div class="shell nav">
+        <a class="brand" href="index.html">
+          <img src="assets/iq-classic-logo.svg" alt="Logo Hockey IQ Classic" />
+          <span>Hockey IQ Classic</span>
+        </a>
+
+        <nav class="navlinks" id="navlinks" aria-label="Navigation principale">
+          <a href="index.html#tournoi">Le tournoi</a>
+          <a href="index.html#format">Format</a>
+          <a href="index.html#experience">L'expérience</a>
+          <a class="current" href="photos.html">Photos</a>
+          <a href="index.html#partenaires">Partenaires</a>
+          <a class="nav-cta" href="mailto:hockeyiqclassic@gmail.com"
+            >Nous contacter</a
+          >
+        </nav>
+
+        <button
+          class="menu"
+          id="menu"
+          type="button"
+          aria-label="Ouvrir le menu"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="gallery-hero">
+        <div class="shell gallery-hero-grid">
+          <div>
+            <a class="back-link" href="index.html">← Retour à l'accueil</a>
+            <p class="gallery-kicker">Dans l'objectif</p>
+            <h1>Les images du Hockey IQ<span>Classic</span></h1>
+          </div>
+          <p class="gallery-intro">
+            L'intensité sur la glace, les émotions sur le banc et les souvenirs
+            partagés autour du tournoi.
+          </p>
+        </div>
+      </section>
+
+      <section class="gallery-section">
+        <div class="shell">
+          <div class="gallery-head">
+            <div>
+              <p class="section-number">Galerie officielle</p>
+              <h2>Édition <span>2026</span></h2>
+            </div>
+            <p>Cliquez sur une photo pour l'afficher en plein écran.</p>
+          </div>
+
+          <!-- Les emplacements photo-01.jpg à photo-500.jpg sont générés automatiquement. -->
+          <div class="photo-gallery" id="photoGallery"></div>
+
+          <div class="gallery-more-wrap">
+            <button class="gallery-more" id="galleryMore" type="button">
+              Voir plus de photos <span>↓</span>
+            </button>
+          </div>
+
+          <div class="gallery-empty" id="galleryEmpty" hidden>
+            <span>Les premières images arrivent bientôt.</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div
+      class="lightbox"
+      id="lightbox"
+      aria-hidden="true"
+      role="dialog"
+      aria-label="Photo en plein écran"
+    >
+      <button
+        class="lightbox-close"
+        id="lightboxClose"
+        type="button"
+        aria-label="Fermer"
+      >
+        ×
+      </button>
+      <img id="lightboxImage" src="" alt="" />
+    </div>
+
+    <section class="partner-ticker" aria-label="Nos partenaires">
+      <div class="partner-ticker__label">Nos partenaires</div>
+      <div class="partner-ticker__viewport">
+        <div class="partner-ticker__track">
+          <div class="partner-ticker__group">
+            <img
+              src="assets/partenaires/Métropole.png"
+              alt="Métropole Rouen Normandie"
+            />
+            <img src="assets/partenaires/rouen.png" alt="Ville de Rouen" />
+            <img
+              src="assets/partenaires/Métropole.png"
+              alt="Métropole Rouen Normandie"
+            />
+            <img src="assets/partenaires/rouen.png" alt="Ville de Rouen" />
+            <img
+              src="assets/partenaires/Métropole.png"
+              alt="Métropole Rouen Normandie"
+            />
+            <img src="assets/partenaires/rouen.png" alt="Ville de Rouen" />
+          </div>
+          <div class="partner-ticker__group" aria-hidden="true">
+            <img src="assets/partenaires/Métropole.png" alt="" />
+            <img src="assets/partenaires/rouen.png" alt="" />
+            <img src="assets/partenaires/Métropole.png" alt="" />
+            <img src="assets/partenaires/rouen.png" alt="" />
+            <img src="assets/partenaires/Métropole.png" alt="" />
+            <img src="assets/partenaires/rouen.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="photos-footer">
+      <div class="shell footer-line">
+        <div class="footer-brand">
+          <img src="assets/iq-classic-logo.svg" alt="" />
+          <span>Hockey IQ Classic</span>
+        </div>
+        <a href="mailto:hockeyiqclassic@gmail.com">hockeyiqclassic@gmail.com</a>
+      </div>
+    </footer>
+
+    <script>
+      const menu = document.getElementById("menu");
+      const nav = document.getElementById("navlinks");
+      menu.addEventListener("click", () => {
+        const open = nav.classList.toggle("open");
+        menu.setAttribute("aria-expanded", String(open));
+        menu.textContent = open ? "×" : "☰";
+      });
+
+      const gallery = document.getElementById("photoGallery");
+      const empty = document.getElementById("galleryEmpty");
+      const moreButton = document.getElementById("galleryMore");
+
+      /* ADMIN : déposez simplement photo-01.jpg à photo-500.jpg dans assets/photos/. */
+      const totalPhotos = 500;
+      const photosPerPage = 12;
+      let nextPhoto = 1;
+
+      function createPhoto(number) {
+        const figure = document.createElement("figure");
+        const isWide = number % 7 === 1;
+        const isTall = !isWide && number % 11 === 4;
+
+        figure.className = "gallery-card";
+        if (isWide) figure.classList.add("gallery-card--wide");
+        if (isTall) figure.classList.add("gallery-card--tall");
+
+        const image = document.createElement("img");
+        const fileNumber = String(number).padStart(2, "0");
+        image.src = `assets/photos/photo-${fileNumber}.jpg`;
+        image.alt = `Hockey IQ Classic — photo ${number}`;
+        image.loading = "lazy";
+        image.decoding = "async";
+
+        image.addEventListener("error", () => {
+          figure.remove();
+          if (
+            !gallery.querySelector(".gallery-card") &&
+            nextPhoto > totalPhotos
+          ) {
+            empty.hidden = false;
+          }
+        });
+
+        figure.appendChild(image);
+        return figure;
+      }
+
+      function loadNextPhotos() {
+        const fragment = document.createDocumentFragment();
+        const lastPhoto = Math.min(nextPhoto + photosPerPage - 1, totalPhotos);
+
+        for (; nextPhoto <= lastPhoto; nextPhoto += 1) {
+          fragment.appendChild(createPhoto(nextPhoto));
+        }
+
+        gallery.appendChild(fragment);
+
+        if (nextPhoto > totalPhotos) {
+          moreButton.hidden = true;
+        }
+      }
+
+      moreButton.addEventListener("click", loadNextPhotos);
+      loadNextPhotos();
+
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImage = document.getElementById("lightboxImage");
+      const closeButton = document.getElementById("lightboxClose");
+
+      gallery.addEventListener("click", (event) => {
+        const image = event.target.closest("img");
+        if (!image) return;
+        lightboxImage.src = image.src;
+        lightboxImage.alt = image.alt;
+        lightbox.classList.add("open");
+        lightbox.setAttribute("aria-hidden", "false");
+        document.body.classList.add("no-scroll");
+      });
+
+      function closeLightbox() {
+        lightbox.classList.remove("open");
+        lightbox.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("no-scroll");
+      }
+
+      closeButton.addEventListener("click", closeLightbox);
+      lightbox.addEventListener("click", (event) => {
+        if (event.target === lightbox) closeLightbox();
+      });
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") closeLightbox();
+      });
+    
+      const languageChoice = document.getElementById("languageChoice");
+      const languagePages = {fr: "photos.html", en: "photos-en.html"};
+
+      if (sessionStorage.getItem("hiq-language-confirmed") !== "1") {
+        languageChoice.hidden = false;
+        document.body.classList.add("language-choice-open");
+      }
+
+      languageChoice.querySelectorAll("[data-language]").forEach((button) => {
+        button.addEventListener("click", () => {
+          const language = button.dataset.language;
+          localStorage.setItem("hiq-language", language);
+          sessionStorage.setItem("hiq-language-confirmed", "1");
+          if (languagePages[language] !== "photos.html") {
+            window.location.href = languagePages[language];
+          } else {
+            languageChoice.hidden = true;
+            document.body.classList.remove("language-choice-open");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

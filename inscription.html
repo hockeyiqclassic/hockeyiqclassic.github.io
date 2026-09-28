@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#071a31" />
+    <meta name="google" content="notranslate" />
+    <title>Inscription — Hockey IQ Classic</title>
+    <meta
+      name="description"
+      content="Formulaire de manifestation d'intérêt pour participer à la Hockey IQ Classic."
+    />
+    <link rel="icon" type="image/svg+xml" href="assets/iq-classic-logo.svg" />
+    <link rel="stylesheet" href="inscription.css" />
+  </head>
+
+  <body translate="no" class="registration-page">
+
+    <div class="language-choice" id="languageChoice" hidden>
+      <div class="language-choice__panel" role="dialog" aria-modal="true" aria-labelledby="languageTitle">
+        <img src="assets/iq-classic-logo.svg" alt="" />
+        <p>Bienvenue · Welcome</p>
+        <h2 id="languageTitle">Choisissez votre langue</h2>
+        <div class="language-choice__actions">
+          <button type="button" data-language="fr">Français</button>
+          <button type="button" data-language="en">English</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="topbar">
+      Le hockey se joue ici. L'expérience commence maintenant.
+    </div>
+
+    <header class="registration-header">
+      <div class="shell nav">
+        <a class="brand" href="index.html">
+          <img src="assets/iq-classic-logo.svg" alt="Logo Hockey IQ Classic" />
+          <span>Hockey IQ Classic</span>
+        </a>
+
+        <nav class="navlinks" id="navlinks" aria-label="Navigation principale">
+          <a href="index.html#tournoi">Le tournoi</a>
+          <a href="index.html#format">Format</a>
+          <a href="index.html#experience">L'expérience</a>
+          <a href="index.html#partenaires">Partenaires</a>
+          <a class="nav-cta" href="mailto:HOCKEYIQCLASSIC@GMAIL.COM"
+            >Nous contacter</a
+          >
+        </nav>
+
+        <button
+          class="menu"
+          id="menu"
+          type="button"
+          aria-label="Ouvrir le menu"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="registration-hero">
+        <div class="shell registration-hero-grid">
+          <div>
+            <a class="back-link" href="index.html">← Retour au site</a>
+            <p class="registration-kicker">Candidature équipe</p>
+            <h1>Entrez dans la <span>Classic</span></h1>
+          </div>
+
+          <div class="registration-intro">
+            <p>
+              Présentez-nous votre équipe et votre projet sportif. Cette demande
+              constitue une manifestation d'intérêt et ne garantit pas encore
+              l'inscription définitive au tournoi.
+            </p>
+            <div class="form-progress" aria-hidden="true">
+              <span class="active">01</span><span>02</span><span>03</span
+              ><span>04</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="registration-content">
+        <div class="shell registration-layout">
+          <aside class="registration-aside">
+            <p class="aside-label">Avant de commencer</p>
+            <h2>Une demande simple et rapide.</h2>
+            <p>
+              Préparez les coordonnées du club, le niveau de l'équipe et les
+              informations du responsable.
+            </p>
+            <ul>
+              <li><span>01</span> Équipe</li>
+              <li><span>02</span> Responsable</li>
+              <li><span>03</span> Projet sportif</li>
+              <li><span>04</span> Validation</li>
+            </ul>
+          </aside>
+
+          <form class="registration-form" id="registrationForm">
+            <fieldset class="form-card">
+              <legend><span>01</span> Votre équipe</legend>
+              <div class="form-grid">
+                <label>
+                  Nom du club <b>*</b>
+                  <input
+                    name="club"
+                    type="text"
+                    placeholder="Nom du club"
+                    required
+                  />
+                </label>
+                <label>
+                  Nom de l'équipe <b>*</b>
+                  <input
+                    name="equipe"
+                    type="text"
+                    placeholder="Nom de l'équipe"
+                    required
+                  />
+                </label>
+                <label>
+                  Ville <b>*</b>
+                  <input
+                    name="ville"
+                    type="text"
+                    placeholder="Ville"
+                    required
+                  />
+                </label>
+                <label>
+                  Pays <b>*</b>
+                  <input name="pays" type="text" placeholder="Pays" required />
+                </label>
+                <label>
+                  Catégorie <b>*</b>
+                  <input
+                    name="categorie"
+                    type="text"
+                    placeholder="Ex. U10"
+                    required
+                  />
+                </label>
+                <label>
+                  Niveau de jeu <b>*</b>
+                  <input
+                    name="niveau"
+                    type="text"
+                    placeholder="Championnat / division"
+                    required
+                  />
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset class="form-card">
+              <legend><span>02</span> Responsable de l'équipe</legend>
+              <div class="form-grid">
+                <label>
+                  Prénom <b>*</b>
+                  <input
+                    name="prenom"
+                    type="text"
+                    autocomplete="given-name"
+                    required
+                  />
+                </label>
+                <label>
+                  Nom <b>*</b>
+                  <input
+                    name="nom"
+                    type="text"
+                    autocomplete="family-name"
+                    required
+                  />
+                </label>
+                <label>
+                  Fonction dans le club <b>*</b>
+                  <input
+                    name="fonction"
+                    type="text"
+                    placeholder="Coach, dirigeant…"
+                    required
+                  />
+                </label>
+                <label>
+                  Téléphone <b>*</b>
+                  <input
+                    name="telephone"
+                    type="tel"
+                    autocomplete="tel"
+                    required
+                  />
+                </label>
+                <label class="full-width">
+                  Adresse e-mail <b>*</b>
+                  <input
+                    name="email"
+                    type="email"
+                    autocomplete="email"
+                    required
+                  />
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset class="form-card">
+              <legend><span>03</span> Projet sportif</legend>
+              <div class="form-grid">
+                <label>
+                  Ligue ou championnat
+                  <input
+                    name="ligue"
+                    type="text"
+                    placeholder="Nom de la compétition"
+                  />
+                </label>
+                <label>
+                  Nombre de joueurs estimé <b>*</b>
+                  <input
+                    name="joueurs"
+                    type="number"
+                    min="1"
+                    max="40"
+                    required
+                  />
+                </label>
+                <label class="full-width">
+                  Présentez-nous votre équipe <b>*</b>
+                  <textarea
+                    name="presentation"
+                    rows="6"
+                    placeholder="Parcours, résultats, ambitions et raisons de votre candidature…"
+                    required
+                  ></textarea>
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset class="form-card">
+              <legend><span>04</span> Validation</legend>
+              <label class="check-line">
+                <input name="confirmation" type="checkbox" required />
+                <span
+                  >Je certifie l'exactitude des informations transmises et
+                  comprends que cette demande ne constitue pas une inscription
+                  définitive.</span
+                >
+              </label>
+              <button class="submit-button" type="submit">
+                Envoyer ma candidature <span>→</span>
+              </button>
+              <p class="form-note">
+                Votre messagerie s'ouvrira avec toutes les informations déjà
+                préparées.
+              </p>
+            </fieldset>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <section class="partner-ticker" aria-label="Nos partenaires">
+      <div class="partner-ticker__label">Nos partenaires</div>
+      <div class="partner-ticker__viewport">
+        <div class="partner-ticker__track">
+          <div class="partner-ticker__group">
+            <img
+              src="assets/partenaires/Métropole.png"
+              alt="Métropole Rouen Normandie"
+            />
+            <img src="assets/partenaires/rouen.png" alt="Ville de Rouen" />
+            <img
+              src="assets/partenaires/Métropole.png"
+              alt="Métropole Rouen Normandie"
+            />
+            <img src="assets/partenaires/rouen.png" alt="Ville de Rouen" />
+            <img
+              src="assets/partenaires/Métropole.png"
+              alt="Métropole Rouen Normandie"
+            />
+            <img src="assets/partenaires/rouen.png" alt="Ville de Rouen" />
+          </div>
+          <div class="partner-ticker__group" aria-hidden="true">
+            <img src="assets/partenaires/Métropole.png" alt="" />
+            <img src="assets/partenaires/rouen.png" alt="" />
+            <img src="assets/partenaires/Métropole.png" alt="" />
+            <img src="assets/partenaires/rouen.png" alt="" />
+            <img src="assets/partenaires/Métropole.png" alt="" />
+            <img src="assets/partenaires/rouen.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="registration-footer">
+      <div class="shell footer-line">
+        <span>© 2026 Hockey IQ Classic</span>
+        <a href="mailto:HOCKEYIQCLASSIC@GMAIL.COM">HOCKEYIQCLASSIC@GMAIL.COM</a>
+      </div>
+    </footer>
+
+    <script>
+      const menu = document.getElementById("menu");
+      const nav = document.getElementById("navlinks");
+
+      menu.addEventListener("click", () => {
+        const isOpen = nav.classList.toggle("open");
+        menu.setAttribute("aria-expanded", String(isOpen));
+      });
+
+      document
+        .getElementById("registrationForm")
+        .addEventListener("submit", (event) => {
+          event.preventDefault();
+          const data = new FormData(event.currentTarget);
+          const subject = `Candidature Hockey IQ Classic — ${data.get("club")}`;
+          const body = [
+            "NOUVELLE CANDIDATURE — HOCKEY IQ CLASSIC",
+            "",
+            `Club : ${data.get("club")}`,
+            `Équipe : ${data.get("equipe")}`,
+            `Ville / Pays : ${data.get("ville")} / ${data.get("pays")}`,
+            `Catégorie : ${data.get("categorie")}`,
+            `Niveau : ${data.get("niveau")}`,
+            "",
+            `Responsable : ${data.get("prenom")} ${data.get("nom")}`,
+            `Fonction : ${data.get("fonction")}`,
+            `Téléphone : ${data.get("telephone")}`,
+            `E-mail : ${data.get("email")}`,
+            "",
+            `Ligue / championnat : ${data.get("ligue") || "Non renseigné"}`,
+            `Nombre de joueurs : ${data.get("joueurs")}`,
+            "",
+            "Présentation :",
+            data.get("presentation"),
+          ].join("\n");
+
+          window.location.href = `mailto:HOCKEYIQCLASSIC@GMAIL.COM?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        });
+    
+      const languageChoice = document.getElementById("languageChoice");
+      const languagePages = {fr: "inscription.html", en: "inscription-en.html"};
+
+      if (sessionStorage.getItem("hiq-language-confirmed") !== "1") {
+        languageChoice.hidden = false;
+        document.body.classList.add("language-choice-open");
+      }
+
+      languageChoice.querySelectorAll("[data-language]").forEach((button) => {
+        button.addEventListener("click", () => {
+          const language = button.dataset.language;
+          localStorage.setItem("hiq-language", language);
+          sessionStorage.setItem("hiq-language-confirmed", "1");
+          if (languagePages[language] !== "inscription.html") {
+            window.location.href = languagePages[language];
+          } else {
+            languageChoice.hidden = true;
+            document.body.classList.remove("language-choice-open");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
