@@ -18,7 +18,7 @@
     <div class="language-choice" id="languageChoice" hidden>
       <div class="language-choice__panel" role="dialog" aria-modal="true" aria-labelledby="languageTitle">
         <img src="assets/iq-classic-logo.svg" alt="" />
-        <p>Bienvenue · Welcome</p>
+        <p id="languageWelcome">Bienvenue</p>
         <h2 id="languageTitle">Choisissez votre langue</h2>
         <div class="language-choice__actions">
           <button type="button" data-language="fr">Français</button>
@@ -353,6 +353,32 @@
     
       const languageChoice = document.getElementById("languageChoice");
       const languagePages = {fr: "index.html", en: "index-en.html"};
+
+      const browserLanguage = (navigator.languages?.[0] || navigator.language || "fr")
+        .toLowerCase()
+        .startsWith("fr") ? "fr" : "en";
+
+      const choiceTranslations = {
+        fr: {
+          welcome: "Bienvenue",
+          title: "Choisissez votre langue",
+        },
+        en: {
+          welcome: "Welcome",
+          title: "Choose your language",
+        },
+      };
+
+      document.getElementById("languageWelcome").textContent =
+        choiceTranslations[browserLanguage].welcome;
+      document.getElementById("languageTitle").textContent =
+        choiceTranslations[browserLanguage].title;
+
+      const preferredButton = languageChoice.querySelector(
+        `[data-language="${browserLanguage}"]`,
+      );
+      preferredButton?.classList.add("preferred");
+      preferredButton?.setAttribute("autofocus", "");
 
       if (sessionStorage.getItem("hiq-language-confirmed") !== "1") {
         languageChoice.hidden = false;
