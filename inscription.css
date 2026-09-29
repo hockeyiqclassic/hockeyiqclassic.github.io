@@ -1,6 +1,8 @@
 @font-face {
   font-family: "Hockey IQ";
-  src: url("HockeyIq-Regular.otf") format("opentype");
+  src: url("assets/HockeyIq-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
   font-display: swap;
 }
 
